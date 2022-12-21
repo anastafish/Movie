@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://use.typekit.net/ewn7gqp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap" rel="stylesheet">    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Movies Librarys</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <button id="newmovie" type="button" onclick="openForm()">
+          Add a new Movie
+        </button>        
+        <h1>Movies Library</h1>
+      </header>
+      <div class="main">
+        <div class="form-popup" id="myform">
+            <form action="/action_length.php" class="form-container">
+              <h1>New Movie</h1>
+  
+              <label for="movie-title">Movie Title</label>
+              <input
+              required
+                id="title"
+                type="text"
+                name="movie-title"
+                placeholder="Enter the Movie name"
+              />
+  
+              <label for="rate">Movie Rate (out of 10)</label>
+              <input
+                id="rate"
+                type="number"
+                max="10"
+                min="0"
+                step=".5"
+                name="auhtor"
+                placeholder="Enter the Movie Rate"
+              />
+  
+              <label for="length">Movie Length (minutes)</label>
+              <input
+                id="length"
+                type="number"
+                min="30"
+                step="5"
+                name="length"
+                placeholder="Enter the Movie Length"
+              />
+  
+              <label for="watched">Did you Watch it?</label>
+              <label>Yes<input type="radio" name="watched" value="Yes" /></label>
+              <label>No<input type="radio" name="watched" value="No" /></label>
+  
+              <button type="button" class="btn">Add</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">
+                Close
+              </button>
+            </form>
+          </div>
+        <div id="moviecards">
+        </div>
+      </div>
+      <footer class="footer">
+        <p>
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear())
+          </script>
+          AnasTafish
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

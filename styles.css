@@ -3,7 +3,7 @@
   margin: 0;
 }
 
-body{
+body {
   appearance: none;
 }
 
@@ -22,17 +22,14 @@ header {
   align-items: center;
   justify-content: center;
   grid-row: 1 / 2;
-  background-color:  #FF8B00 ;
+  background-color: #ff8b00;
   position: relative;
 }
 
 header > h1 {
-  position: sticky;
-  top: 0;
   font-size: 50px;
-  font-family: 'Rubik Vinyl', cursive;
+  font-family: "Rubik Vinyl", cursive;
   letter-spacing: 2px;
-
 }
 
 .main {
@@ -46,18 +43,18 @@ header > h1 {
   background-color: #866947;
 }
 
-footer{
+footer {
   background-color: #866947;
   padding: 10px;
 }
 
-footer > p{
-  font-family: 'Rubik Gemstones', cursive;
+footer > p {
+  font-family: "Rubik Gemstones", cursive;
 }
 
 #moviecards {
-  display:grid;
-  grid-template-columns: repeat( auto-fill, minmax(16rem, 1fr) );
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   grid-gap: 5rem;
   height: 100%;
   width: 100%;
@@ -66,33 +63,32 @@ footer > p{
   grid-auto-columns: 1fr;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 #newmovie {
   position: fixed;
   border-radius: 40px;
   font-size: 18px;
-  text-align: center;  
+  text-align: center;
   right: 40px;
   width: fit-content;
-  height:fit-content;
-  background-color:white;
-  color:black;
+  height: fit-content;
+  background-color: white;
+  color: black;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
   opacity: 0.8;
 }
 
-#newmovie:hover{
+#newmovie:hover {
   background-color: #04aa6d;
 }
 
 .card {
-  --background:#FFFFFF;
-  --text:black;
-  box-shadow:0 0 2rem -1rem ;
+  --background: #ffffff;
+  --text: black;
+  box-shadow: 0 0 2rem -1rem;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -102,9 +98,9 @@ footer > p{
   justify-self: center;
 }
 
-
-.card > h3, p{
-  font-family: 'Bungee Inline', cursive;
+.card > h3,
+p {
+  font-family: "Bungee Inline", cursive;
 }
 
 /* The popup form - hidden by default */
@@ -128,7 +124,7 @@ footer > p{
   max-width: 300px;
   padding: 10px;
   border-radius: 20px;
-  background-color:#FF7000;
+  background-color: #ff7000;
 }
 
 /* Full-width input fields */
@@ -166,18 +162,18 @@ footer > p{
   background-color: red;
 }
 
-
 .form-container .btn:hover,
 .open-button:hover {
   opacity: 1;
 }
 
-.form-container label, h1{
-  font-family: 'Martian Mono', monospace;
+.form-container label,
+h1 {
+  font-family: "Martian Mono", monospace;
 }
 
-.delbtn{
-  background-color:red;
+.delbtn {
+  background-color: red;
   color: white;
   padding: 16px 20px;
   border: none;
@@ -189,7 +185,7 @@ footer > p{
   align-self: center;
 }
 
-.readbtn{
+.readbtn {
   background-color: #04aa6d;
   color: white;
   padding: 16px 20px;

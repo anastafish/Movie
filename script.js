@@ -130,12 +130,21 @@ function randomColor(div) {
   div.style.background = colors[Math.floor(Math.random() * colors.length)];
 }
 
-function Movie(title, rate, length, watched) {
-  this.title = title;
-  this.rate = rate;
-  this.length = length;
-  this.watched = watched;
+class Movie{
+  constructor(title, rate,length, watched){
+    this.title = title;
+    this.rate = rate;
+    this.length = length;
+    this.watched = watched;
+  }
 }
+
+// function Movie(title, rate, length, watched) {
+//   this.title = title;
+//   this.rate = rate;
+//   this.length = length;
+//   this.watched = watched;
+// }
 
 function openForm() {
   document.querySelector(".form-popup").style.display = "block";

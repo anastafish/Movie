@@ -139,13 +139,6 @@ class Movie{
   }
 }
 
-// function Movie(title, rate, length, watched) {
-//   this.title = title;
-//   this.rate = rate;
-//   this.length = length;
-//   this.watched = watched;
-// }
-
 function openForm() {
   document.querySelector(".form-popup").style.display = "block";
 }

@@ -7,9 +7,24 @@ let btnArray = [];
 let readArray = [];
 let myLibrary = [];
 
-
-
 addBtn.addEventListener("click", () => {
+  const title = document.getElementById('title')
+  const rate = document.getElementById('rate')
+  const length = document.getElementById('length')
+  if (title.validity.valueMissing){
+   alert("Type A title please")
+  }
+  else if(rate.validity.valueMissing){
+    alert('Pick a rate please')
+  }
+  else if(length.validity.valueMissing){
+    alert('pick a the movie length please')
+  }
+  else if(!document.querySelector('input[name="watched"]:checked')) {
+    alert('Choose if you Watched The movie')
+  }
+  
+else{
   const titleValue = document.querySelector("#title").value;
   const rateValue = document.querySelector("#rate").value;
   const lengtheValue = document.querySelector("#length").value;
@@ -21,10 +36,13 @@ addBtn.addEventListener("click", () => {
 
   document.querySelector(".form-container").reset();
   closeForm();
+  }
 });
+
 newmovieBtn.addEventListener("click", () => {
   openForm();
 });
+
 
 function createNewmovie(movieTitle, movierate, movielength, movieRaed) {
   newmovie = new Movie(movieTitle, movierate, movielength, movieRaed);
@@ -62,7 +80,6 @@ function addmovieToLibrary(libraray) {
     watchedp.classList.add("watched");
     watchedp.classList.add(`num${libraray.length - 1}`);
     div.appendChild(watchedp);
-    
     readBtn.setAttribute('data', libraray.length - 1)
     readBtn.setAttribute('type', "button")
     readBtn.innerHTML = "Watched"
@@ -136,3 +153,5 @@ function openForm() {
 function closeForm() {
   document.querySelector(".form-popup").style.display = "none";
 }
+
+
